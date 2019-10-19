@@ -2,7 +2,6 @@
 #include<cstdio>
 #include<fstream>
 using namespace std;
-string a[10];
 int tongjizifu(string h){
 	int k;
     int sum=0;
