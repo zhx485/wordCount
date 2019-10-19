@@ -12,14 +12,20 @@ int tongjizifu(string h){
 		filename[k] = h[k];
 	}
 	filename[k] = '\0';
+	char zh[10000]={'\0'};
+	ifstream ax;
+	int i=0;
+	ax.open(filename);
+	while(!ax.eof()){
+		zh[i]=ax.get();
+		i++;
+		sum++;
+	}
+	ax.close();
+	/*
 	FILE* fp;
 	fp = fopen(filename, "a+"); //判断文件是否存在及可读
 	char jk;
-/*	while(1){
-	fscanf(fp,"%c",&jk);
-	if (jk=='\0') break;
-	else sum++;
-	}*/
 	int i=0 ,j=0;
 	while(1){
 	fscanf(fp, "%c", &a[i][j]);  
@@ -42,7 +48,7 @@ int tongjizifu(string h){
 		j=0;
 	}
 		else j++;
-	}
+	}*/
 	return sum;
 }
 int main(){
